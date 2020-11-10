@@ -104,5 +104,16 @@ public class Mpdemo1010ApplicationTests {
         System.out.println(users);
     }
 
+    //通过map封装查询条件
+    @Test
+    public void testSelectByMap(){
+
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("name", "Billie");
+        map.put("age", 24);
+        List<User> users = userMapper.selectByMap(map);
+
+        users.forEach(System.out::println);
+    }
 
 }
