@@ -47,4 +47,16 @@ public class Mpdemo1010ApplicationTests {
         System.out.println("insert:"+insert);
     }
 
+    //修改操作
+    @Test
+    public void updateUser() {
+
+        User user = new User();
+        user.setId(2L);
+        user.setAge(120);
+
+        int row = userMapper.updateById(user);
+        System.out.println(row);
+    }
+
 }
