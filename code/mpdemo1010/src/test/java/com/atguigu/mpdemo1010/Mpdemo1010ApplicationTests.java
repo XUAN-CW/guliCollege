@@ -139,4 +139,18 @@ public class Mpdemo1010ApplicationTests {
 
     }
 
+    //删除操作 物理删除
+    @Test
+    public void testDeleteById(){
+        int result = userMapper.deleteById(5L);
+        System.out.println(result);
+    }
+
+    //批量删除
+    @Test
+    public void testDeleteBatchIds() {
+        int result = userMapper.deleteBatchIds(Arrays.asList(1,2));
+        System.out.println(result);
+    }
+
 }
