@@ -59,4 +59,43 @@ public class Mpdemo1010ApplicationTests {
         System.out.println(row);
     }
 
+    /**
+     * 测试 乐观锁插件
+     * - 效果：version 字段加一
+     * - 注意：如果 version 字段为 null , 则加一失败。
+     *   为了进行正确的测试，需要先给 version 赋初值。
+     */
+    @Test
+    public void testOptimisticLocker() {
+
+        //查询
+        User user = userMapper.selectById(1L);
+        //修改数据
+        user.setName("Helen Yao");
+        user.setEmail("helen@qq.com");
+        //执行更新
+        userMapper.updateById(user);
+    }
+
+    /**
+     * 测试乐观锁插件 失败
+     * 这个地方报错是正常的
+     */
+    @Test
+    public void testOptimisticLockerFail() {
+
+        //查询
+        User user = userMapper.selectById(1L);
+        //修改数据
+        user.setName("Helen Yao1");
+        user.setEmail("helen@qq.com1");
+
+        //模拟取出数据后，数据库中version实际数据比取出的值大，即已被其它线程修改并更新了version
+        user.setVersion(user.getVersion() - 1);
+
+        //执行更新
+        userMapper.updateById(user);
+    }
+
+
 }

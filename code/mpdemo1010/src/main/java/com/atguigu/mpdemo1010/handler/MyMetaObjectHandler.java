@@ -14,6 +14,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         this.setFieldValByName("createTime",new Date(),metaObject);
         this.setFieldValByName("updateTime",new Date(),metaObject);
+        this.setFieldValByName("version", 1, metaObject);
     }
 
     //使用mp实现修改操作，这个方法执行
