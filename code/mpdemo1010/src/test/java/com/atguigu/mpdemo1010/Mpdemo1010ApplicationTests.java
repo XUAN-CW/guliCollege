@@ -30,5 +30,21 @@ public class Mpdemo1010ApplicationTests {
         System.out.println(users);
     }
 
+    //添加操作
+    @Test
+    public void addUser() {
+
+        // MyBatis-Plus 可自动生成一个十九位的 ID
+        // MyBatis-Plus 默认的主键策略：ID_WORKER
+        // ID_WORKER : p自带策略，生成19位值，数字类型使用这种策略，比如long
+
+        User user = new User();
+        user.setName("lucy2");
+        user.setAge(70);
+        user.setEmail("lucy@qq.com");
+
+        int insert = userMapper.insert(user);
+        System.out.println("insert:"+insert);
+    }
 
 }
