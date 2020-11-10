@@ -97,5 +97,12 @@ public class Mpdemo1010ApplicationTests {
         userMapper.updateById(user);
     }
 
+    //多个id批量查询
+    @Test
+    public void testSelectDemo1() {
+        List<User> users = userMapper.selectBatchIds(Arrays.asList(1L, 2L, 3L));
+        System.out.println(users);
+    }
+
 
 }
