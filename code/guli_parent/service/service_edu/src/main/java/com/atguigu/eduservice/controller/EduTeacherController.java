@@ -128,5 +128,16 @@ public class EduTeacherController {
         return R.ok().data("total",total).data("rows",records);
     }
 
+    //添加讲师接口的方法
+    @PostMapping("addTeacher")
+    public R addTeacher(@RequestBody EduTeacher eduTeacher) {
+        boolean save = teacherService.save(eduTeacher);
+        if(save) {
+            return R.ok();
+        } else {
+            return R.error();
+        }
+    }
+
 }
 
