@@ -4,10 +4,7 @@ package com.atguigu.eduservice.controller;
 import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.service.EduTeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 /**
@@ -35,6 +32,12 @@ public class EduTeacherController {
         return list;
     }
 
+    //2 逻辑删除讲师的方法
+    //http://localhost:8001/eduservice/teacher/1
+    @DeleteMapping("{id}")
+    public boolean removeById(@PathVariable String id){
+        return teacherService.removeById(id);
+    }
 
 }
 
