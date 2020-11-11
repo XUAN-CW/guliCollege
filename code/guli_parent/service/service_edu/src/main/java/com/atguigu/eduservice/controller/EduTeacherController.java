@@ -5,6 +5,7 @@ import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.entity.vo.TeacherQuery;
 import com.atguigu.eduservice.service.EduTeacherService;
 import com.atguigu.commonutils.R;
+import com.atguigu.servicebase.exceptionhandler.GlobalExceptionHandler;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.ApiOperation;
@@ -157,5 +158,9 @@ public class EduTeacherController {
         }
     }
 
+    @GetMapping("GlobalExceptionHandlerTest")
+    public void GlobalExceptionHandlerTest() {
+        int a = 10/0;
+    }
 }
 
