@@ -91,9 +91,9 @@ public class EduTeacherController {
     }
 
     //4 条件查询带分页的方法
-    @GetMapping("pageTeacherCondition/{current}/{limit}")
+    @PostMapping("pageTeacherCondition/{current}/{limit}")
     public R pageTeacherCondition(@PathVariable long current,@PathVariable long limit,
-                                  TeacherQuery teacherQuery) {
+                                  @RequestBody(required = false) TeacherQuery teacherQuery) {
         //创建page对象
         Page<EduTeacher> pageTeacher = new Page<>(current,limit);
 
