@@ -25,6 +25,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/eduservice/teacher")
+@CrossOrigin  //解决跨域
 public class EduTeacherController {
 
     //把service注入
