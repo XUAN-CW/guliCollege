@@ -5,6 +5,7 @@
     <modules>
         <module>service_vod</module>
         <module>service_edu</module>
+        <module>service_oss</module>
     </modules>
     <parent>
         <artifactId>guli_parent</artifactId>
