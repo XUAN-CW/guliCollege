@@ -67,3 +67,23 @@ npm install -g webpack webpack-cli
 
 ![image-20201113211631340](README/image-20201113211631340.png)
 
+# day07
+
+## 准备阿里云 OSS
+
+![image-20201114014032086](README/image-20201114014032086.png)
+
+## AccessKey的创建与获取
+
+![image-20201114015502033](README/image-20201114015502033.png)
+
+![image-20201114015835203](README/image-20201114015835203.png)
+
+
+
+## 参考
+
+> 03-尚硅谷-谷粒学院-阿里云oss开发准备.mp4
+
+
+
