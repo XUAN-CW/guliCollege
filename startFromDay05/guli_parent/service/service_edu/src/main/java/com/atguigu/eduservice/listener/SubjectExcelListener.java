@@ -4,6 +4,7 @@ import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.atguigu.eduservice.entity.EduSubject;
 import com.atguigu.eduservice.entity.excel.SubjectData;
+import com.atguigu.eduservice.mapper.EduSubjectMapper;
 import com.atguigu.eduservice.service.EduSubjectService;
 import com.atguigu.servicebase.exceptionhandler.GuliException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -11,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class SubjectExcelListener extends AnalysisEventListener<SubjectData> {
 
-    //因为SubjectExcelListener不能交给spring进行管理，需要自己new，不能注入其他对象
+    //因为SubjectExcelListener不交给spring进行管理，需要自己new，不能注入其他对象
     //不能实现数据库操作
     public EduSubjectService subjectService;
     public SubjectExcelListener() {}
