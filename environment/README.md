@@ -86,4 +86,12 @@ npm install -g webpack webpack-cli
 > 03-尚硅谷-谷粒学院-阿里云oss开发准备.mp4
 
 
+# day10
+ 
+准备nacos
+ 
+访问地址：http://localhost:8848/nacos/#/login
+
+账号密码都是`nacos`
+ 
 
