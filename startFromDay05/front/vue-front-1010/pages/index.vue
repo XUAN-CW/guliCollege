@@ -3,10 +3,10 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        {{ name }}
+        {{ name="name" }}
       </h1>
       <h2 class="subtitle">
-        {{ description }}
+        {{ description="description" }}
       </h2>
       <div class="links">
         <a
