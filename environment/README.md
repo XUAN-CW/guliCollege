@@ -266,3 +266,35 @@ export default {
 
 但这里建议，上传图片到 阿里云 OSS ,再把图片对应的 url 放到数据库中。
 
+# day12
+
+## 短信服务
+
+![image-20201127194905511](image/image-20201127194905511.png)
+
+![image-20201127195720013](image/image-20201127195720013.png)
+
+![image-20201127203225158](image/image-20201127203225158.png)
+
+### 引用用途
+
+`guli_parent\service\service_msm\src\main\java\com\atguigu\msmservice\service\impl\MsmServiceImpl.java`
+
+```java
+request.putQueryParameter("SignName","在线教育"); //申请阿里云 签名名称
+request.putQueryParameter("TemplateCode","SMS_205891849"); //申请阿里云 模板code 
+```
+
+#### 提示
+
+别忘了改成自己的
+
+```java
+DefaultProfile profile =
+                DefaultProfile.getProfile("default", "LTAI4FvvVEWiTJ3GNJJqJnk7", "9st82dv7EvFk9mTjYO1XXbM632fRbG");
+```
+
+### 参考
+
+> day12【首页登录和注册功能】- 06-阿里云短信服务介绍.mp4
+
