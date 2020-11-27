@@ -298,3 +298,27 @@ DefaultProfile profile =
 
 > day12【首页登录和注册功能】- 06-阿里云短信服务介绍.mp4
 
+## element-ui
+
+vue-front-1010
+
+```
+npm install element-ui
+```
+
+## vue-qriously
+
+vue-front-1010
+
+```
+npm install vue-qriously
+```
+
+## js-cookie
+
+vue-front-1010
+
+```
+npm install js-cookie
+```
+
