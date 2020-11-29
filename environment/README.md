@@ -322,3 +322,20 @@ vue-front-1010
 npm install js-cookie
 ```
 
+# day13
+
+## 微信扫描登录
+
+准备 `wx.open.app_id` 和 `app_secret`  ，这里需要企业获取，个人无法得到，因此使用下面这个
+
+```properties
+# 微信开放平台 appid
+wx.open.app_id=wxed9954c01bb89b47
+# 微信开放平台 appsecret
+wx.open.app_secret=a7482517235173ddb4083788de60b90e
+```
+
+### 参考
+
+> day13【微信扫描登录】- 07-微信扫描登录（准备工作）.mp4
+
