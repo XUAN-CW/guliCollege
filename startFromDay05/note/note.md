@@ -22,3 +22,23 @@ Nginx默认的 request body 为1M，我上传的视频超过 1M
 
 ![image-20201122105213188](image/image-20201122105213188.png)
 
+# day14
+
+## localhost:3000/player/null
+
+添加课程时 `edu_video.video_source_id`  字段 **null**，导致无法播放。
+
+### 解决方法
+
+#### 视频里的方法
+
+视频里的做法是： 手动到管理控制台复制上传视频的 id 到 `edu_video.video_source_id` 对应的行中，显然这样是不好的。
+
+#### 正确的方法
+
+应该修改添加课程的模块，使数据库中 `edu_video.video_source_id` 为所上传视频的 ID 
+
+### 参考
+
+> day14【首页课程和名师功能】- 17-整合阿里云播放器播放（2）.mp4
+
